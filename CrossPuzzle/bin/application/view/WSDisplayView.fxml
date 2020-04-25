@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="boardDisplay" editable="false" layoutX="21.0" layoutY="45.0" prefHeight="212.0" prefWidth="556.0" style="-fx-padding: 0 20 0 20;" />
+            <Label layoutX="276.0" layoutY="273.0" text="Word List" />
+            <TextArea fx:id="wordList" editable="false" layoutX="23.0" layoutY="296.0" prefHeight="90.0" prefWidth="557.0" />
+            <Label layoutX="242.0" layoutY="20.0" text="Here is your new puzzle!" />
+            <Button fx:id="newPuzzle" layoutX="481.0" layoutY="9.0" mnemonicParsing="false" onAction="#goHome" text="New Puzzle" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

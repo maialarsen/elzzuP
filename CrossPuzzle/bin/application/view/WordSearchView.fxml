@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="word" layoutX="62.0" layoutY="123.0" />
+            <Button fx:id="addWord" layoutX="96.0" layoutY="158.0" mnemonicParsing="false" onAction="#addWord" text="Add Word" />
+            <Button fx:id="home" layoutX="99.0" layoutY="243.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
+            <Button fx:id="finish" layoutX="97.0" layoutY="206.0" mnemonicParsing="false" onAction="#finishPuzzle" text="Finish" />
+            <TextArea fx:id="wordList" layoutX="284.0" layoutY="79.0" prefHeight="243.0" prefWidth="257.0" />
+            <Label layoutX="379.0" layoutY="57.0" text="Word List" />
+            <Label layoutX="70.0" layoutY="96.0" text="Enter word to add to list" />
+            <Label layoutX="19.0" layoutY="47.0" prefHeight="34.0" prefWidth="103.0" text="Game size (N x N):" />
+            <ChoiceBox fx:id="sizeChoice" layoutX="122.0" layoutY="53.0" prefHeight="17.0" prefWidth="57.0" />
+            <Label fx:id="errorMsg" layoutX="36.0" layoutY="310.0" prefHeight="25.0" prefWidth="186.0" textFill="#eb0505" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="startButt" layoutX="219.0" layoutY="256.0" mnemonicParsing="false" onAction="#crossStart" text="Start">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Button>
+            <Label layoutX="42.0" layoutY="48.0" prefHeight="56.0" prefWidth="517.0" text="Welcome to crossword generator">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="puzzleName" layoutX="220.0" layoutY="184.0" />
+            <Label layoutX="192.0" layoutY="144.0" text="what would you like to name your puzzle" />
+            <ChoiceBox fx:id="puzzleChoice" layoutX="212.0" layoutY="215.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

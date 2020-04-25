@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="272.0" layoutY="31.0" text="Wordsearch generator" />
+            <TextField fx:id="word" layoutX="41.0" layoutY="96.0" />
+            <TextField fx:id="hint" layoutX="226.0" layoutY="96.0" prefHeight="60.0" prefWidth="354.0" />
+            <Label layoutX="102.0" layoutY="68.0" text="Word" />
+            <ListView fx:id="addedWords" layoutX="354.0" layoutY="178.0" prefHeight="200.0" prefWidth="200.0" />
+            <Label layoutX="375.0" layoutY="77.0" text="Hint" />
+            <Button fx:id="addWord" layoutX="90.0" layoutY="131.0" mnemonicParsing="false" onAction="#submitWord" text="Add Word" />
+            <Button layoutX="90.0" layoutY="216.0" mnemonicParsing="false" onAction="#finishCrossword" text="Finish" />
+            <Button layoutX="90.0" layoutY="278.0" mnemonicParsing="false" onAction="#takeMeHome" text="Home" />
+            <Label layoutX="234.0" layoutY="170.0" text="Added Words:" />
+            <Label fx:id="newWords" layoutX="258.0" layoutY="248.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

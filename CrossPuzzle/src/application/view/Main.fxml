@@ -22,7 +22,6 @@
             </Label>
             <TextField fx:id="puzzleName" layoutX="220.0" layoutY="184.0" />
             <Label layoutX="192.0" layoutY="144.0" text="what would you like to name your puzzle" />
-            <ChoiceBox fx:id="puzzleChoice" layoutX="212.0" layoutY="215.0" prefWidth="150.0" />
          </children>
       </AnchorPane>
    </center>

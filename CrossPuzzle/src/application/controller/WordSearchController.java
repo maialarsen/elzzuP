@@ -14,9 +14,14 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class WordSearchController {
+	private String name;
 	private WordSearch currentPuzzle = CurrentPuzzle.getWSInstance();
 	private Board gameBoard;	
-	public ObservableList<String> sizeList = FXCollections.observableArrayList("8", "10", "12", "15", "20");
+	private ObservableList<String> sizeList = FXCollections.observableArrayList("8", "10", "12", "15", "20");
+	
+	public WordSearchController(String name) {
+		this.name = name;
+	}
 	
 	@FXML
 	private Label errorMsg;
@@ -43,6 +48,14 @@ public class WordSearchController {
 	
 	public WordSearch getCurrentPuzzle() {
 		return this.currentPuzzle;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	@FXML
@@ -74,7 +87,7 @@ public class WordSearchController {
 			gameBoard = new Board(Integer.parseInt(sizeChoice.getValue()));
 			gameBoard.generate(currentPuzzle.getWords());
 			try {
-				ViewSwitcher.getInstance().switchView(4);
+				ViewSwitcher.getInstance().switchView(3);
 			} catch(Exception e) {
 				e.printStackTrace();
 			}	

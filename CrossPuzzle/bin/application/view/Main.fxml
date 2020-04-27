@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -7,22 +10,73 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
+   <top>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="startButt" layoutX="219.0" layoutY="256.0" mnemonicParsing="false" onAction="#crossStart" text="Start">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="144.0" layoutY="259.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f6cff" height="261.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+            <Ellipse fill="#fcff00" layoutX="302.0" layoutY="111.0" opacity="0.5" radiusX="145.0" radiusY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <Shadow />
+               </effect>
+            </Ellipse>
+            <Ellipse fill="RED" layoutX="301.0" layoutY="100.0" radiusX="145.0" radiusY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="DODGERBLUE" layoutX="206.0" layoutY="167.0" opacity="0.6" radius="38.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <Shadow />
+               </effect>
+            </Circle>
+            <Circle fill="DODGERBLUE" layoutX="205.0" layoutY="160.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#ff3535" layoutX="248.0" layoutY="174.0" opacity="0.5" radius="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <Shadow />
+               </effect>
+            </Circle>
+            <Circle fill="#52ff36" layoutX="248.0" layoutY="165.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Label layoutX="175.0" layoutY="80.0" opacity="0.67" prefHeight="56.0" prefWidth="250.0" text="Word Search">
                <font>
-                  <Font size="42.0" />
+                  <Font size="44.0" />
+               </font>
+               <effect>
+                  <Shadow />
+               </effect>
+            </Label>
+            <Button fx:id="startButt" layoutX="240.0" layoutY="339.0" maxHeight="40.0" minHeight="15.0" minWidth="125.0" mnemonicParsing="false" onAction="#crossStart" text="Start">
+               <font>
+                  <Font size="15.0" />
                </font>
             </Button>
-            <Label layoutX="42.0" layoutY="48.0" prefHeight="56.0" prefWidth="517.0" text="Welcome to crossword generator">
+            <Label layoutX="175.0" layoutY="73.0" prefHeight="56.0" prefWidth="250.0" text="Word Search" textFill="WHITE">
                <font>
-                  <Font size="34.0" />
+                  <Font size="44.0" />
                </font>
             </Label>
-            <TextField fx:id="puzzleName" layoutX="220.0" layoutY="184.0" />
-            <Label layoutX="192.0" layoutY="144.0" text="what would you like to name your puzzle" />
+            <Label layoutX="232.0" layoutY="37.0" prefHeight="56.0" prefWidth="138.0" text="Create Your Own" textFill="#e4ff00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="25.0" fill="#00ff0f" height="35.0" layoutX="187.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="230.0" />
+            <TextField fx:id="puzzleName" alignment="CENTER" layoutX="190.0" layoutY="296.0" minHeight="30.0" minWidth="225.0" promptText="Name your puzzle!" />
+            <Circle fill="#4dff36" layoutX="425.0" layoutY="53.0" opacity="0.6" radius="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <Shadow />
+               </effect>
+            </Circle>
+            <Circle fill="#4dff36" layoutX="425.0" layoutY="47.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#9238ff" layoutX="397.0" layoutY="60.0" opacity="0.45" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <Shadow />
+               </effect>
+            </Circle>
+            <Circle fill="#fffa38" layoutX="397.0" layoutY="55.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#ff3838" layoutX="397.0" layoutY="43.0" opacity="0.5" radius="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <Shadow />
+               </effect>
+            </Circle>
+            <Circle fill="#ff38b3" layoutX="397.0" layoutY="37.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
          </children>
       </AnchorPane>
-   </center>
+   </top>
 </BorderPane>

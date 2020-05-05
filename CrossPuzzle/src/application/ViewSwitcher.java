@@ -11,7 +11,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-
+/**
+ * This class switches the views of the application
+ * @author Team elzzuP
+ *
+ */
 public class ViewSwitcher {
 	private static ViewSwitcher instance = null;
 	private Stage stage;
@@ -20,12 +24,20 @@ public class ViewSwitcher {
 	WordSearchController wordSearchController = null;
 	MainController mainController = null;
 
+	/**
+	 * Get instance of ViewSwitcher
+	 * @return instance of ViewSwitcher class
+	 */
 	public static ViewSwitcher getInstance() {
 		if (instance == null)
 			instance = new ViewSwitcher();
 		return instance;
 	}
 
+	/**
+	 * Initializes stage for application
+	 * @throws IOException
+	 */
 	public void initStage() throws IOException {
 		Scene scene = new Scene(rootPane, 600, 400);
 		stage.setTitle("WordSearch Generator");
@@ -34,6 +46,11 @@ public class ViewSwitcher {
 		switchView(1);
 	}
 
+	/**
+	 * Switches view from list of fxml files
+	 * @param view
+	 * @throws IOException
+	 */
 	public void switchView(int view) throws IOException {
 		URL fxmlFile;
 		FXMLLoader loader;
@@ -58,23 +75,43 @@ public class ViewSwitcher {
 			break;
 		}
 	}
-
+	
+	/**
+	 * Get stage of application
+	 * @return application main stage
+	 */
 	public Stage getStage() {
 		return stage;
 	}
-
+	
+	/** 
+	 * Set stage of application
+	 * @param stage
+	 */
 	public void setStage(Stage stage) {
 		this.stage = stage;
 	}
 
+	/**
+	 * Get BorderPane of application
+	 * @return
+	 */
 	public BorderPane getRootPane() {
 		return rootPane;
 	}
 
+	/**
+	 * Set BorderPane of application
+	 * @param rootPane
+	 */
 	public void setRootPane(BorderPane rootPane) {
 		this.rootPane = rootPane;
 	}
 
+	/**
+	 * Set instance of ViewSwitcher
+	 * @param instance
+	 */
 	public static void setInstance(ViewSwitcher instance) {
 		ViewSwitcher.instance = instance;
 	}

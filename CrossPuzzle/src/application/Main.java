@@ -5,6 +5,11 @@ import javafx.application.Application;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * This class starts the application
+ * @author Team elzzuP
+ *
+ */
 public class Main extends Application{
 
     public static void main(String[] args) {

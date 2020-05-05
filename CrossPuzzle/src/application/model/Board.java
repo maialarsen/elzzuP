@@ -3,30 +3,55 @@ package application.model;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * This class creates the word puzzle board 
+ * @author Team elzzuP
+ *
+ */
 public class Board {
 	private char[][] board;
 	private int[][] orientation;
 	private int BOARD_SIZE = 10;
 	private int wordCount = 0;
 	
+	/** 
+	 * Constructs a new blank char board and a blank int board for orientation 
+	 * @param boardSize
+	 */
 	public Board (int boardSize) {
 		this.BOARD_SIZE = boardSize;
 		board = blankBoardC();
 		orientation = blankBoardI();
 	}
 	
+	/**
+	 * Get size of board
+	 * @return board size
+	 */
 	public int getBoardSize () {
 		return this.BOARD_SIZE;
 	}
 	
+	/**
+	 * Set size of board 
+	 * @param boardSize
+	 */
 	public void setBoardSize(int boardSize) {
 		this.BOARD_SIZE = boardSize;
 	}
 	
+	/** 
+	 * get current board game
+	 * @return
+	 */
 	public char[][] getGameBoard() {
 		return this.board;
 	}
 	
+	/**
+	 * create blank board of '0' characters
+	 * @return blank puzzle board
+	 */
 	public char[][] blankBoardC() {
 		char[][] newBoard = new char[BOARD_SIZE][BOARD_SIZE];
 		for(int x = 0; x < BOARD_SIZE; x++) {
@@ -37,6 +62,10 @@ public class Board {
 		return newBoard;
 	}
 	
+	/**
+	 * create blank board of int 0
+	 * @return blank orientation board
+	 */
 	public int[][] blankBoardI() {
 		int[][] newBoard = new int[BOARD_SIZE][BOARD_SIZE];
 		for(int x = 0; x < BOARD_SIZE; x++) {
@@ -47,6 +76,10 @@ public class Board {
 		return newBoard;
 	}
 	
+	/**
+	 * adds word to puzzle board 
+	 * @param word
+	 */
 	public void addToBoard(String word) {
 		Random r = new Random();
 		boolean positionCheck = false; boolean overlapCheck = false;
@@ -202,6 +235,9 @@ public class Board {
 		}
 	}
 	
+	/**
+	 * fills remainder of puzzle board with random letters
+	 */
 	public void fillRemainder() {
 		String letters = "abcdefghijklmnopqrstuvwxyz";
 		Random r = new Random();
@@ -214,6 +250,10 @@ public class Board {
 		}
 	}
 	
+	/**
+	 * generates the puzzle board with given words
+	 * @param words
+	 */
 	public void generate(ArrayList<String> words) {
 		for (String word : words) {
 			addToBoard(word);
@@ -221,6 +261,10 @@ public class Board {
 		fillRemainder();
 	}
 	
+	/**
+	 * displays board to screen 
+	 * @return String representation of board
+	 */
 	public String displayBoard() {
 		String display = "";
 		for(int i = 0; i < BOARD_SIZE; i++) {
@@ -232,11 +276,16 @@ public class Board {
 		return display;
 	}
 	
+	/**
+	 * displays word list
+	 * @param words
+	 * @return String representation of word list
+	 */
 	public String displayWords(ArrayList<String> words) {
 		String wordList = "";
 		int i = 0;
 		for(String word: words) {
-			wordList += word + "\t";
+			wordList += word + "\t\t";
 			i++;
 			if (i % 4 == 0) 
 				wordList += "\n";

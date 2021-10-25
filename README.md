@@ -1,2 +1,2 @@
 # elzzuP
-Class team Project
+Application Programming team Project
